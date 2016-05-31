@@ -21,7 +21,7 @@
 		</array>
 	</dict>
 	<key>createdby</key>
-	<string>ejectall</string>
+	<string>wingsuitist</string>
 	<key>description</key>
 	<string>Eject external devices</string>
 	<key>disabled</key>
@@ -87,6 +87,6 @@ for disk in $(diskutil list|grep external|sed -e 's/^\([^ ]*\) .*$/\1/g'); do di
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://twitter.com/wingsuitist</string>
 </dict>
 </plist>
