@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>ejectall</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>887A5B23-A6E8-47FC-BCF4-09569787C41A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C23ACFB0-96F1-440A-A72A-61E274C519D3</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>ejectall</string>
+	<key>description</key>
+	<string>Eject external devices</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Eject</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>ejectexternal</string>
+				<key>text</key>
+				<string>Eject external</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>887A5B23-A6E8-47FC-BCF4-09569787C41A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>#!/bin/bash
+# unmount all external drives from your osx
+for disk in $(diskutil list|grep external|sed -e 's/^\([^ ]*\) .*$/\1/g'); do diskutil unmountDisk $disk; done</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C23ACFB0-96F1-440A-A72A-61E274C519D3</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Looks for mounted external drives and ejects / unmounts them.</string>
+	<key>uidata</key>
+	<dict>
+		<key>887A5B23-A6E8-47FC-BCF4-09569787C41A</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+		<key>C23ACFB0-96F1-440A-A72A-61E274C519D3</key>
+		<dict>
+			<key>ypos</key>
+			<real>60</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
