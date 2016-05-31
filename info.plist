@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>ejectall</string>
+	<string>com.wingsuitist.ejectall</string>
 	<key>category</key>
 	<string>Tools</string>
 	<key>connections</key>
